@@ -1,14 +1,27 @@
 <?php       
        
-       defined ( 'MySQLHostname' ) || define ( 'MySQLHostname' , '127.0.0.1' ) ;
-       defined ( 'MySQLDatabase' ) || define ( 'MySQLDatabase' , 'chat' ) ;
-       defined ( 'MySQLUsername' ) || define ( 'MySQLUsername' , 'root' ) ;
+       /** Defina o endereço do servidor MySQL (padrão: localhost) **/
+       defined ( 'MySQLHostname' ) || define ( 'MySQLHostname' , '' ) ;
+       
+       /** Defina o nome do banco de dados do chat **/
+       defined ( 'MySQLDatabase' ) || define ( 'MySQLDatabase' , '' ) ;
+       
+       /** Defina o nome do usuário de acesso ao banco de dados **/
+       defined ( 'MySQLUsername' ) || define ( 'MySQLUsername' , '' ) ;
+       
+       /** Defina a senha desse usuário **/
        defined ( 'MySQLPassword' ) || define ( 'MySQLPassword' , '' ) ;
        
-
+       /** Defina as tags permitidas no chat **/
        defined ( 'AllowedTagsOnText' ) || define ( 'AllowedTagsOnText' , '<b><i><a><u><font>' ) ;
+       
+       /** Quando um usuário entra, qual mensagem será exibida? **/
        defined ( 'JoinMessage' ) || define ( 'JoinMessage' , '%NICKNAME% entrou !' ) ;
+       
+       /** Quando um usuário diz alguma coisa, como a mensagem será exibida? **/
        defined ( 'MessageSent' ) || define ( 'MessageSent' , '%NICKNAME% disse: %TEXT%' ) ;
+       
+       /** Quando um usuário sai, qual mensagem será exibida? **/
        defined ( 'UserOut' ) || define ( 'UserOut' , '%NICKNAME% saiu !' ) ;
        
        if ( defined ( 'PRODUCTION' ) ) {
